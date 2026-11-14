@@ -4,13 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://c4x4e18k5h53r" path="res://Sprite Assets/BackGrounds/pattern - grid sheet - 100x100in-BAtools (1).png" id="1_bdfba"]
 [ext_resource type="Texture2D" uid="uid://bd7uqaumxxfkp" path="res://Sprite Assets/AdminBot/AdminBot.png" id="2_pj3qg"]
 [ext_resource type="Texture2D" path="res://Peerless Soldier ForwardFace test.png" id="3_the2v"]
+[ext_resource type="Texture2D" uid="uid://ohm88wvodehy" path="res://Sprite Assets/Player/peerless Soldier ForwardFace2.png" id="5_1oo4e"]
+[ext_resource type="Texture2D" uid="uid://jw463ij3tcp3" path="res://Sprite Assets/Player/Peerless Soldier BackwardsFace.png" id="6_8007g"]
+[ext_resource type="Texture2D" uid="uid://6ia84vm6tw6g" path="res://Sprite Assets/Player/Peerless Soldier BackwardsFace2.png" id="7_bdfba"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pj3qg"]
 
 [node name="MainRoom" type="Node2D" unique_id=1126727139]
 
 [node name="RoomSprite" type="Sprite2D" parent="." unique_id=522595656]
-position = Vector2(1001, 1004)
+position = Vector2(713, 839)
 scale = Vector2(-0.5, -0.5)
 texture = ExtResource("1_bdfba")
 
@@ -22,6 +25,7 @@ position = Vector2(0, -2)
 texture = ExtResource("2_pj3qg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AdminBot" unique_id=818593728]
+visible = false
 position = Vector2(0, 1)
 scale = Vector2(0.5628937, 1.1953171)
 shape = SubResource("CircleShape2D_pj3qg")
@@ -36,14 +40,17 @@ texture = ExtResource("3_the2v")
 [node name="ForwardPlayer2" type="Sprite2D" parent="Player" unique_id=210926728]
 visible = false
 position = Vector2(16, 17)
+texture = ExtResource("5_1oo4e")
 
 [node name="BackwardsPlayer" type="Sprite2D" parent="Player" unique_id=2010282720]
 visible = false
 position = Vector2(16, 17)
+texture = ExtResource("6_8007g")
 
 [node name="BackwardsPlayer2" type="Sprite2D" parent="Player" unique_id=1326396457]
 visible = false
 position = Vector2(16, 17)
+texture = ExtResource("7_bdfba")
 
 [node name="LeftPlayer" type="Sprite2D" parent="Player" unique_id=968684349]
 visible = false
@@ -62,3 +69,4 @@ visible = false
 position = Vector2(16, 17)
 
 [node name="PlayerCamera" type="Camera2D" parent="Player" unique_id=775474564]
+zoom = Vector2(2, 2)
