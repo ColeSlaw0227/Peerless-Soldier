@@ -38,42 +38,41 @@ shape = SubResource("CircleShape2D_pj3qg")
 script = ExtResource("1_77bs5")
 
 [node name="ForwardPlayer" type="Sprite2D" parent="Player" unique_id=1072930454]
-position = Vector2(-1, 1)
 texture = ExtResource("4_1oo4e")
 
 [node name="ForwardPlayer2" type="Sprite2D" parent="Player" unique_id=210926728]
 visible = false
-position = Vector2(16, 17)
+position = Vector2(0, 1.5)
 texture = ExtResource("5_1oo4e")
 
 [node name="BackwardsPlayer" type="Sprite2D" parent="Player" unique_id=2010282720]
 visible = false
-position = Vector2(16, 17)
+position = Vector2(-1, 2)
 texture = ExtResource("6_8007g")
 
 [node name="BackwardsPlayer2" type="Sprite2D" parent="Player" unique_id=1326396457]
 visible = false
-position = Vector2(16, 17)
+position = Vector2(0, 1)
 texture = ExtResource("7_bdfba")
 
 [node name="LeftPlayer" type="Sprite2D" parent="Player" unique_id=968684349]
 visible = false
-position = Vector2(16, 17)
+position = Vector2(0, 2)
 texture = ExtResource("8_y6pwk")
 
 [node name="LeftPlayer2" type="Sprite2D" parent="Player" unique_id=1852018608]
 visible = false
-position = Vector2(16, 17)
+position = Vector2(0, 2)
 texture = ExtResource("9_d6a44")
 
 [node name="RightPlayer" type="Sprite2D" parent="Player" unique_id=788601319]
 visible = false
-position = Vector2(16, 17)
+position = Vector2(0, 2.5)
 texture = ExtResource("10_ruoc2")
 
 [node name="RightPlayer2" type="Sprite2D" parent="Player" unique_id=610607273]
 visible = false
-position = Vector2(16, 17)
+position = Vector2(0, 2.5)
 texture = ExtResource("11_l7t8c")
 
 [node name="PlayerCamera" type="Camera2D" parent="Player" unique_id=775474564]
