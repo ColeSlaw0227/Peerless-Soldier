@@ -4,11 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://c4x4e18k5h53r" path="res://Sprite Assets/BackGrounds/pattern - grid sheet - 100x100in-BAtools (1).png" id="1_bdfba"]
 [ext_resource type="Texture2D" uid="uid://bd7uqaumxxfkp" path="res://Sprite Assets/AdminBot/AdminBot.png" id="2_pj3qg"]
 [ext_resource type="Texture2D" path="res://Peerless Soldier ForwardFace test.png" id="3_the2v"]
-[ext_resource type="Texture2D" path="res://Peerless Soldier BackwardsFace.png" id="4_t3c8w"]
-[ext_resource type="Texture2D" path="res://Peerless Soldier LeftFace.png" id="5_1oo4e"]
-[ext_resource type="Texture2D" path="res://Peerless Soldier RightFace.png" id="6_8007g"]
-[ext_resource type="Texture2D" path="res://peerless Soldier ForwardFace2.png" id="7_8007g"]
-[ext_resource type="Texture2D" path="res://Peerless Soldier BackwardsFace2.png" id="8_bdfba"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pj3qg"]
 
 [node name="MainRoom" type="Node2D" unique_id=1126727139]
 
@@ -25,10 +22,9 @@ position = Vector2(0, -2)
 texture = ExtResource("2_pj3qg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AdminBot" unique_id=818593728]
-visible = false
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AdminBot/CollisionShape2D" unique_id=782196329]
-visible = false
+position = Vector2(0, 1)
+scale = Vector2(0.5628937, 1.1953171)
+shape = SubResource("CircleShape2D_pj3qg")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=680696443]
 script = ExtResource("1_77bs5")
@@ -40,36 +36,29 @@ texture = ExtResource("3_the2v")
 [node name="ForwardPlayer2" type="Sprite2D" parent="Player" unique_id=210926728]
 visible = false
 position = Vector2(16, 17)
-texture = ExtResource("7_8007g")
 
 [node name="BackwardsPlayer" type="Sprite2D" parent="Player" unique_id=2010282720]
 visible = false
 position = Vector2(16, 17)
-texture = ExtResource("4_t3c8w")
 
 [node name="BackwardsPlayer2" type="Sprite2D" parent="Player" unique_id=1326396457]
 visible = false
 position = Vector2(16, 17)
-texture = ExtResource("8_bdfba")
 
 [node name="LeftPlayer" type="Sprite2D" parent="Player" unique_id=968684349]
 visible = false
 position = Vector2(16, 17)
-texture = ExtResource("5_1oo4e")
 
 [node name="LeftPlayer2" type="Sprite2D" parent="Player" unique_id=1852018608]
 visible = false
 position = Vector2(16, 17)
-texture = ExtResource("5_1oo4e")
 
 [node name="RightPlayer" type="Sprite2D" parent="Player" unique_id=788601319]
 visible = false
 position = Vector2(16, 17)
-texture = ExtResource("6_8007g")
 
 [node name="RightPlayer2" type="Sprite2D" parent="Player" unique_id=610607273]
 visible = false
 position = Vector2(16, 17)
-texture = ExtResource("6_8007g")
 
 [node name="PlayerCamera" type="Camera2D" parent="Player" unique_id=775474564]
