@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bs6quwke2h28d"]
 
 [ext_resource type="Script" uid="uid://bvmn3hkgp8eju" path="res://player.gd" id="1_77bs5"]
-[ext_resource type="Texture2D" uid="uid://c4x4e18k5h53r" path="res://Sprite Assets/BackGrounds/pattern - grid sheet - 100x100in-BAtools (1).png" id="1_bdfba"]
+[ext_resource type="Texture2D" uid="uid://dhafw8go34d6o" path="res://Sprite Assets/BackGrounds/pattern - grid sheet - 100x100in-BAtools (1).png" id="1_bdfba"]
 [ext_resource type="Texture2D" uid="uid://bd7uqaumxxfkp" path="res://Sprite Assets/AdminBot/AdminBot.png" id="2_pj3qg"]
 [ext_resource type="Texture2D" uid="uid://d01c27vrgyvda" path="res://Sprite Assets/Player/Peerless Soldier ForwardFace.png" id="4_1oo4e"]
 [ext_resource type="Texture2D" uid="uid://ohm88wvodehy" path="res://Sprite Assets/Player/peerless Soldier ForwardFace2.png" id="5_1oo4e"]
