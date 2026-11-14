@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bs6quwke2h28d"]
 
 [ext_resource type="Script" uid="uid://bvmn3hkgp8eju" path="res://player.gd" id="1_77bs5"]
-[ext_resource type="Texture2D" uid="uid://bi13651873pli" path="res://Sprite Assets/BackGrounds/pattern - grid sheet - 320x320in-BAtools (1).png" id="1_bdfba"]
+[ext_resource type="Texture2D" uid="uid://c4x4e18k5h53r" path="res://Sprite Assets/BackGrounds/pattern - grid sheet - 100x100in-BAtools (1).png" id="1_bdfba"]
 [ext_resource type="Texture2D" uid="uid://bd7uqaumxxfkp" path="res://Sprite Assets/AdminBot/AdminBot.png" id="2_pj3qg"]
 [ext_resource type="Texture2D" path="res://Peerless Soldier ForwardFace test.png" id="3_the2v"]
 [ext_resource type="Texture2D" path="res://Peerless Soldier BackwardsFace.png" id="4_t3c8w"]
@@ -13,7 +13,8 @@
 [node name="MainRoom" type="Node2D" unique_id=1126727139]
 
 [node name="RoomSprite" type="Sprite2D" parent="." unique_id=522595656]
-position = Vector2(1911, 1911)
+position = Vector2(1001, 1004)
+scale = Vector2(-0.5, -0.5)
 texture = ExtResource("1_bdfba")
 
 [node name="AdminBot" type="CharacterBody2D" parent="." unique_id=2135335972]
