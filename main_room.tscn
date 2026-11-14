@@ -2,16 +2,19 @@
 
 [ext_resource type="Script" uid="uid://bvmn3hkgp8eju" path="res://player.gd" id="1_77bs5"]
 [ext_resource type="Texture2D" uid="uid://bi13651873pli" path="res://pattern - grid sheet - 320x320in-BAtools (1).png" id="1_mi4c6"]
+[ext_resource type="Texture2D" uid="uid://cykeqipra24po" path="res://Peerless Soldier ForwardFace test.png" id="3_the2v"]
 
 [node name="MainRoom" type="Node2D" unique_id=1126727139]
+
+[node name="RoomSprite" type="Sprite2D" parent="." unique_id=522595656]
+position = Vector2(1911, 1911)
+texture = ExtResource("1_mi4c6")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=680696443]
 script = ExtResource("1_77bs5")
 
 [node name="PlayerSprite" type="Sprite2D" parent="Player" unique_id=1072930454]
+position = Vector2(22, 20)
+texture = ExtResource("3_the2v")
 
 [node name="PlayerCamera" type="Camera2D" parent="Player" unique_id=775474564]
-
-[node name="RoomSprite" type="Sprite2D" parent="." unique_id=522595656]
-position = Vector2(1911, 1911)
-texture = ExtResource("1_mi4c6")
