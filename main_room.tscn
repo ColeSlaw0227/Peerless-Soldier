@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://bvmn3hkgp8eju" path="res://player.gd" id="1_77bs5"]
 [ext_resource type="Texture2D" uid="uid://bi13651873pli" path="res://pattern - grid sheet - 320x320in-BAtools (1).png" id="1_mi4c6"]
 [ext_resource type="Texture2D" uid="uid://cykeqipra24po" path="res://Peerless Soldier ForwardFace test.png" id="3_the2v"]
+[ext_resource type="Texture2D" uid="uid://jw463ij3tcp3" path="res://Peerless Soldier BackwardsFace.png" id="4_t3c8w"]
+[ext_resource type="Texture2D" uid="uid://hegvj3olxv55" path="res://Peerless Soldier LeftFace.png" id="5_1oo4e"]
+[ext_resource type="Texture2D" uid="uid://c1pnb3ty7mi71" path="res://Peerless Soldier RightFace.png" id="6_8007g"]
 
 [node name="MainRoom" type="Node2D" unique_id=1126727139]
 
@@ -13,8 +16,23 @@ texture = ExtResource("1_mi4c6")
 [node name="Player" type="CharacterBody2D" parent="." unique_id=680696443]
 script = ExtResource("1_77bs5")
 
-[node name="PlayerSprite" type="Sprite2D" parent="Player" unique_id=1072930454]
-position = Vector2(22, 20)
+[node name="ForwardPlayer" type="Sprite2D" parent="Player" unique_id=1072930454]
+position = Vector2(16, 17)
 texture = ExtResource("3_the2v")
+
+[node name="BackwardsPlayer" type="Sprite2D" parent="Player" unique_id=2010282720]
+visible = false
+position = Vector2(16, 17)
+texture = ExtResource("4_t3c8w")
+
+[node name="LeftPlayer" type="Sprite2D" parent="Player" unique_id=968684349]
+visible = false
+position = Vector2(16, 17)
+texture = ExtResource("5_1oo4e")
+
+[node name="RightPlayer" type="Sprite2D" parent="Player" unique_id=788601319]
+visible = false
+position = Vector2(16, 17)
+texture = ExtResource("6_8007g")
 
 [node name="PlayerCamera" type="Camera2D" parent="Player" unique_id=775474564]
