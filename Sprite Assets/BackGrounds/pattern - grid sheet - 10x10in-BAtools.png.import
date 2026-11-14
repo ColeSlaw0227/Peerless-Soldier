@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cykeqipra24po"
-path="res://.godot/imported/Peerless Soldier ForwardFace test.png-ce0a3bdb16b03c34d2340f0d5f361a0c.ctex"
+uid="uid://mrxkyig2lgrt"
+path="res://.godot/imported/pattern - grid sheet - 10x10in-BAtools.png-d62994f0914f60127ec86f48e298cb5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite Assets/Player/Peerless Soldier ForwardFace test.png"
-dest_files=["res://.godot/imported/Peerless Soldier ForwardFace test.png-ce0a3bdb16b03c34d2340f0d5f361a0c.ctex"]
+source_file="res://Sprite Assets/BackGrounds/pattern - grid sheet - 10x10in-BAtools.png"
+dest_files=["res://.godot/imported/pattern - grid sheet - 10x10in-BAtools.png-d62994f0914f60127ec86f48e298cb5f.ctex"]
 
 [params]
 
