@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hegvj3olxv55"
-path="res://.godot/imported/Peerless Soldier LeftFace.png-a71f1fba1e9711c03b884375b9407dcb.ctex"
+uid="uid://ohm88wvodehy"
+path="res://.godot/imported/peerless Soldier ForwardFace2.png-a3383e07543d4f784c0b2862e0083e72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Peerless Soldier LeftFace.png"
-dest_files=["res://.godot/imported/Peerless Soldier LeftFace.png-a71f1fba1e9711c03b884375b9407dcb.ctex"]
+source_file="res://Sprite Assets/Player/peerless Soldier ForwardFace2.png"
+dest_files=["res://.godot/imported/peerless Soldier ForwardFace2.png-a3383e07543d4f784c0b2862e0083e72.ctex"]
 
 [params]
 

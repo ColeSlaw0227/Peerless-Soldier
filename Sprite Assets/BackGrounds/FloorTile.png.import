@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ohm88wvodehy"
-path="res://.godot/imported/peerless Soldier ForwardFace2.png-3dffc82099c67115b065e0c1c109477c.ctex"
+uid="uid://e5flcbm8487o"
+path="res://.godot/imported/FloorTile.png-b600b32a01734b680edb85cb9e746018.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://peerless Soldier ForwardFace2.png"
-dest_files=["res://.godot/imported/peerless Soldier ForwardFace2.png-3dffc82099c67115b065e0c1c109477c.ctex"]
+source_file="res://Sprite Assets/BackGrounds/FloorTile.png"
+dest_files=["res://.godot/imported/FloorTile.png-b600b32a01734b680edb85cb9e746018.ctex"]
 
 [params]
 

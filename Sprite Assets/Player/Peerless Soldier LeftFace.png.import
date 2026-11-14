@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi13651873pli"
-path="res://.godot/imported/pattern - grid sheet - 320x320in-BAtools (1).png-657aff8794653cda01c32794547c16c3.ctex"
+uid="uid://hegvj3olxv55"
+path="res://.godot/imported/Peerless Soldier LeftFace.png-14f80d61fba203de19a2eb170862b9b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pattern - grid sheet - 320x320in-BAtools (1).png"
-dest_files=["res://.godot/imported/pattern - grid sheet - 320x320in-BAtools (1).png-657aff8794653cda01c32794547c16c3.ctex"]
+source_file="res://Sprite Assets/Player/Peerless Soldier LeftFace.png"
+dest_files=["res://.godot/imported/Peerless Soldier LeftFace.png-14f80d61fba203de19a2eb170862b9b1.ctex"]
 
 [params]
 
