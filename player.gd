@@ -19,27 +19,30 @@ func _physics_process(delta: float):
 	$LeftPlayer2.visible = false
 	$BackwardsPlayer2.visible = false
 	var count = int(timer * feetspeed)
-	if velocity.y == 0:
-		if velocity.x == 0:
-			$ForwardPlayer.visible = true
-		else: if velocity.x > 0:
+	if input_direction:
+		if velocity.y == 0:
+			if velocity.x == 0:
+				$ForwardPlayer.visible = true
+			else: if velocity.x > 0:
+				if fmod(count, 2) == 0:
+					$RightPlayer.visible = true
+				else:
+					$RightPlayer2.visible = true
+			else: if velocity.x < 0:
+				if fmod(count, 2) == 0:
+					$LeftPlayer.visible = true
+				else:
+					$LeftPlayer2.visible = true
+		else: if velocity.y > 0:
 			if fmod(count, 2) == 0:
-				$RightPlayer.visible = true
+				$ForwardPlayer.visible = true
 			else:
-				$RightPlayer2.visible = true
-		else: if velocity.x < 0:
+				$ForwardPlayer2.visible = true
+		else: if velocity.y < 0:
 			if fmod(count, 2) == 0:
-				$LeftPlayer.visible = true
+				$BackwardsPlayer.visible = true
 			else:
-				$LeftPlayer2.visible = true
-	else: if velocity.y > 0:
-		if fmod(count, 2) == 0:
-			$ForwardPlayer.visible = true
-		else:
-			$ForwardPlayer2.visible = true
-	else: if velocity.y < 0:
-		if fmod(count, 2) == 0:
-			$BackwardsPlayer.visible = true
-		else:
-			$BackwardsPlayer2.visible = true
+				$BackwardsPlayer2.visible = true
+	else:
+		$ForwardPlayer.visible = true
 	timer += delta

@@ -11,8 +11,16 @@
 [ext_resource type="Texture2D" uid="uid://xab4sb0mwpom" path="res://Sprite Assets/Player/Peerless Soldier LeftFace2.png" id="9_d6a44"]
 [ext_resource type="Texture2D" uid="uid://c1pnb3ty7mi71" path="res://Sprite Assets/Player/Peerless Soldier RightFace.png" id="10_ruoc2"]
 [ext_resource type="Texture2D" uid="uid://cspbme3b0ejjd" path="res://Sprite Assets/Player/Peerless Soldier RightFace2.png" id="11_l7t8c"]
+[ext_resource type="Texture2D" uid="uid://mvbc7c43a8id" path="res://Sprite Assets/Attack/Bullet.png" id="12_d6a44"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pj3qg"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ruoc2"]
+size = Vector2(30.759747, 21.712372)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l7t8c"]
+size = Vector2(15.916561, 10.584761)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lc65s"]
+size = Vector2(19.84448, 131.92099)
 
 [node name="MainRoom" type="Node2D" unique_id=1126727139]
 
@@ -29,10 +37,9 @@ position = Vector2(0, -2)
 texture = ExtResource("2_pj3qg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AdminBot" unique_id=818593728]
-visible = false
-position = Vector2(0, 1)
+position = Vector2(0.34276605, 3)
 scale = Vector2(0.5628937, 1.1953171)
-shape = SubResource("CircleShape2D_pj3qg")
+shape = SubResource("RectangleShape2D_ruoc2")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=680696443]
 script = ExtResource("1_77bs5")
@@ -78,3 +85,24 @@ texture = ExtResource("11_l7t8c")
 
 [node name="PlayerCamera" type="Camera2D" parent="Player" unique_id=775474564]
 zoom = Vector2(2, 2)
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="Player" unique_id=2066906378]
+position = Vector2(0, 3.3491874)
+rotation = 3.1415927
+scale = Vector2(0.5201092, 1.5775864)
+shape = SubResource("RectangleShape2D_l7t8c")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=758010384]
+position = Vector2(-121.00001, 50)
+scale = Vector2(5.523985, 23.740885)
+disable_mode = 1
+collision_priority = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=226870706]
+position = Vector2(0.09034729, -0.16342902)
+scale = Vector2(0.40974757, -0.058638573)
+shape = SubResource("RectangleShape2D_lc65s")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1548735129]
+scale = Vector2(0.99999994, 1.0000001)
+texture = ExtResource("12_d6a44")
