@@ -2,9 +2,8 @@ extends CharacterBody2D
 
 
 @export var player_speed = 300.0
-
-
-
+@export var feetspeed = 500
+var counter = 0.0
 func _physics_process(delta: float):
 	var input_direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 	velocity = input_direction * player_speed
@@ -22,22 +21,24 @@ func _physics_process(delta: float):
 		if velocity.x == 0:
 			$ForwardPlayer.visible = true
 		else: if velocity.x > 0:
-			if fmod(delta, 2) >= 0:
+			if int(counter) / feetspeed % 2 == 0:
 				$RightPlayer.visible = true
 			else:
 				$RightPlayer2.visible = true
 		else: if velocity.x < 0:
-			if fmod(delta, 2) >= 0:
+			if int(counter) / feetspeed % 2 == 0:
 				$LeftPlayer.visible = true
 			else:
 				$LeftPlayer2.visible = true
 	else: if velocity.y > 0:
-		if fmod(delta, 2) >= 0:
+		if int(counter) / feetspeed % 2 == 0:
 			$ForwardPlayer.visible = true
 		else:
 			$ForwardPlayer2.visible = true
 	else: if velocity.y < 0:
-		if fmod(delta, 2) >= 0:
+		if int(counter) / feetspeed % 2 == 0:
 			$BackwardsPlayer.visible = true
 		else:
 			$BackwardsPlayer2.visible = true
+	counter += delta
+	print(counter)
