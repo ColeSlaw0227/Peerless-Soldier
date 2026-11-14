@@ -1,23 +1,11 @@
 [gd_scene format=3 uid="uid://bs6quwke2h28d"]
 
-[ext_resource type="Script" uid="uid://bvmn3hkgp8eju" path="res://player.gd" id="1_77bs5"]
 [ext_resource type="Texture2D" uid="uid://dhafw8go34d6o" path="res://Sprite Assets/BackGrounds/pattern - grid sheet - 100x100in-BAtools (1).png" id="1_bdfba"]
 [ext_resource type="Texture2D" uid="uid://bd7uqaumxxfkp" path="res://Sprite Assets/AdminBot/AdminBot.png" id="2_pj3qg"]
-[ext_resource type="Texture2D" uid="uid://d01c27vrgyvda" path="res://Sprite Assets/Player/Peerless Soldier ForwardFace.png" id="4_1oo4e"]
-[ext_resource type="Texture2D" uid="uid://ohm88wvodehy" path="res://Sprite Assets/Player/peerless Soldier ForwardFace2.png" id="5_1oo4e"]
-[ext_resource type="Texture2D" uid="uid://jw463ij3tcp3" path="res://Sprite Assets/Player/Peerless Soldier BackwardsFace.png" id="6_8007g"]
-[ext_resource type="Texture2D" uid="uid://6ia84vm6tw6g" path="res://Sprite Assets/Player/Peerless Soldier BackwardsFace2.png" id="7_bdfba"]
-[ext_resource type="Texture2D" uid="uid://hegvj3olxv55" path="res://Sprite Assets/Player/Peerless Soldier LeftFace.png" id="8_y6pwk"]
-[ext_resource type="Texture2D" uid="uid://xab4sb0mwpom" path="res://Sprite Assets/Player/Peerless Soldier LeftFace2.png" id="9_d6a44"]
-[ext_resource type="Texture2D" uid="uid://c1pnb3ty7mi71" path="res://Sprite Assets/Player/Peerless Soldier RightFace.png" id="10_ruoc2"]
-[ext_resource type="Texture2D" uid="uid://cspbme3b0ejjd" path="res://Sprite Assets/Player/Peerless Soldier RightFace2.png" id="11_l7t8c"]
 [ext_resource type="Texture2D" uid="uid://mvbc7c43a8id" path="res://Sprite Assets/Attack/Bullet.png" id="12_d6a44"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ruoc2"]
 size = Vector2(30.759747, 21.712372)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l7t8c"]
-size = Vector2(15.916561, 10.584761)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lc65s"]
 size = Vector2(19.84448, 131.92099)
@@ -40,57 +28,6 @@ texture = ExtResource("2_pj3qg")
 position = Vector2(0.34276605, 3)
 scale = Vector2(0.5628937, 1.1953171)
 shape = SubResource("RectangleShape2D_ruoc2")
-
-[node name="Player" type="CharacterBody2D" parent="." unique_id=680696443]
-script = ExtResource("1_77bs5")
-feetspeed = 5
-
-[node name="ForwardPlayer" type="Sprite2D" parent="Player" unique_id=1072930454]
-texture = ExtResource("4_1oo4e")
-
-[node name="ForwardPlayer2" type="Sprite2D" parent="Player" unique_id=210926728]
-visible = false
-position = Vector2(0, 1.5)
-texture = ExtResource("5_1oo4e")
-
-[node name="BackwardsPlayer" type="Sprite2D" parent="Player" unique_id=2010282720]
-visible = false
-position = Vector2(-1, 2)
-texture = ExtResource("6_8007g")
-
-[node name="BackwardsPlayer2" type="Sprite2D" parent="Player" unique_id=1326396457]
-visible = false
-position = Vector2(0, 1)
-texture = ExtResource("7_bdfba")
-
-[node name="LeftPlayer" type="Sprite2D" parent="Player" unique_id=968684349]
-visible = false
-position = Vector2(0, 2)
-texture = ExtResource("8_y6pwk")
-
-[node name="LeftPlayer2" type="Sprite2D" parent="Player" unique_id=1852018608]
-visible = false
-position = Vector2(0, 2)
-texture = ExtResource("9_d6a44")
-
-[node name="RightPlayer" type="Sprite2D" parent="Player" unique_id=788601319]
-visible = false
-position = Vector2(0, 2.5)
-texture = ExtResource("10_ruoc2")
-
-[node name="RightPlayer2" type="Sprite2D" parent="Player" unique_id=610607273]
-visible = false
-position = Vector2(0, 2.5)
-texture = ExtResource("11_l7t8c")
-
-[node name="PlayerCamera" type="Camera2D" parent="Player" unique_id=775474564]
-zoom = Vector2(2, 2)
-
-[node name="PlayerCollision" type="CollisionShape2D" parent="Player" unique_id=2066906378]
-position = Vector2(0, 3.3491874)
-rotation = 3.1415927
-scale = Vector2(0.5201092, 1.5775864)
-shape = SubResource("RectangleShape2D_l7t8c")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=758010384]
 position = Vector2(-121.00001, 50)

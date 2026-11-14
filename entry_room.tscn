@@ -1,0 +1,165 @@
+[gd_scene format=4 uid="uid://4ef4enr7nyf5"]
+
+[ext_resource type="Texture2D" uid="uid://f6j8fwbkc0jw" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/1 Tiles/Tileset.png" id="1_x2105"]
+[ext_resource type="Texture2D" uid="uid://isr4r6p3yuri" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/2 Background/Night/1.png" id="2_dg174"]
+[ext_resource type="Texture2D" uid="uid://d3vc46233ea0g" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/2 Background/Night/2.png" id="3_f8ryi"]
+[ext_resource type="Texture2D" uid="uid://dxw6wgfiqna41" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/2 Background/Night/3.png" id="4_5oa2c"]
+[ext_resource type="Texture2D" uid="uid://btcq58xui3gdh" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/2 Background/Night/5.png" id="5_8sv04"]
+[ext_resource type="Script" uid="uid://bvmn3hkgp8eju" path="res://player.gd" id="6_qd6ql"]
+[ext_resource type="Texture2D" uid="uid://d01c27vrgyvda" path="res://Sprite Assets/Player/Peerless Soldier ForwardFace.png" id="7_arj3n"]
+[ext_resource type="Texture2D" uid="uid://ohm88wvodehy" path="res://Sprite Assets/Player/peerless Soldier ForwardFace2.png" id="8_vfwmo"]
+[ext_resource type="Texture2D" uid="uid://jw463ij3tcp3" path="res://Sprite Assets/Player/Peerless Soldier BackwardsFace.png" id="9_4urrg"]
+[ext_resource type="Texture2D" uid="uid://6ia84vm6tw6g" path="res://Sprite Assets/Player/Peerless Soldier BackwardsFace2.png" id="10_ohml4"]
+[ext_resource type="Texture2D" uid="uid://hegvj3olxv55" path="res://Sprite Assets/Player/Peerless Soldier LeftFace.png" id="11_dbwmk"]
+[ext_resource type="Texture2D" uid="uid://xab4sb0mwpom" path="res://Sprite Assets/Player/Peerless Soldier LeftFace2.png" id="12_nryb1"]
+[ext_resource type="Texture2D" uid="uid://c1pnb3ty7mi71" path="res://Sprite Assets/Player/Peerless Soldier RightFace.png" id="13_3fro6"]
+[ext_resource type="Texture2D" uid="uid://cspbme3b0ejjd" path="res://Sprite Assets/Player/Peerless Soldier RightFace2.png" id="14_dm0to"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_484wh"]
+texture = ExtResource("1_x2105")
+texture_region_size = Vector2i(32, 32)
+1:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+2:2/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+5:5/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+7:6/0 = 0
+7:5/0 = 0
+7:4/0 = 0
+7:3/0 = 0
+7:2/0 = 0
+7:1/0 = 0
+7:0/0 = 0
+6:0/0 = 0
+5:0/0 = 0
+4:0/0 = 0
+3:0/0 = 0
+2:0/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+6:1/0 = 0
+0:1/0 = 0
+3:2/0 = 0
+2:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+6:4/0 = 0
+6:3/0 = 0
+5:3/0 = 0
+1:3/0 = 0
+0:3/0 = 0
+1:2/0 = 0
+0:2/0 = 0
+6:5/0 = 0
+4:5/0 = 0
+3:5/0 = 0
+2:5/0 = 0
+1:5/0 = 0
+0:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+4:6/0 = 0
+0:4/0 = 0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_pvicv"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_484wh")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2105"]
+size = Vector2(15.916561, 10.584761)
+
+[node name="EntryRoom" type="Node2D" unique_id=469964683]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1165405452]
+tile_map_data = PackedByteArray("AAAAAP3/AAAAAAQAAAAAAP7/AAAAAAUAAAAAAP//AAAAAAYAAAABAP3/AAABAAQAAAABAP7/AAABAAUAAAABAP//AAABAAYAAAACAP3/AAABAAQAAAACAP7/AAABAAUAAAACAP//AAABAAYAAAD+//7/AAABAAEAAAD///7/AAAFAAEAAAD9//7/AAABAAEAAAD8//7/AAAHAAMAAAD7//7/AAABAAEAAAD6//7/AAAFAAMAAAD5//7/AAAAAAMAAAD5//3/AAADAAEAAAD5//z/AAAHAAEAAAD5//v/AAACAAIAAAD5//r/AAADAAEAAAD5//n/AAADAAEAAAD5//j/AAADAAEAAAD5//f/AAADAAEAAAD5//b/AAADAAEAAAD5//X/AAADAAEAAAD5//T/AAADAAEAAAADAP3/AAABAAQAAAADAP7/AAABAAUAAAADAP//AAABAAYAAAAEAP3/AAABAAQAAAAEAP7/AAABAAUAAAAEAP//AAABAAYAAAAFAP3/AAABAAQAAAAFAP7/AAABAAUAAAAFAP//AAABAAYAAAAGAP3/AAABAAQAAAAGAP7/AAABAAUAAAAGAP//AAABAAYAAAAHAP3/AAABAAQAAAAHAP7/AAABAAUAAAAHAP//AAABAAYAAAAIAP3/AAABAAQAAAAIAP7/AAABAAUAAAAIAP//AAABAAYAAAAJAP3/AAABAAQAAAAJAP7/AAABAAUAAAAJAP//AAABAAYAAAAKAP3/AAABAAQAAAAKAP7/AAABAAUAAAAKAP//AAABAAYAAAA=")
+tile_set = SubResource("TileSet_pvicv")
+
+[node name="1" type="Sprite2D" parent="." unique_id=377645897]
+position = Vector2(225, -257)
+texture = ExtResource("2_dg174")
+
+[node name="2" type="Sprite2D" parent="1" unique_id=120939201]
+position = Vector2(-1, 1)
+texture = ExtResource("3_f8ryi")
+
+[node name="3" type="Sprite2D" parent="1/2" unique_id=852579082]
+position = Vector2(1, -1)
+texture = ExtResource("4_5oa2c")
+
+[node name="5" type="Sprite2D" parent="1/2/3" unique_id=791354553]
+position = Vector2(0, -2)
+texture = ExtResource("5_8sv04")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=431769409]
+position = Vector2(-418, -116)
+script = ExtResource("6_qd6ql")
+feetspeed = 5
+
+[node name="ForwardPlayer" type="Sprite2D" parent="Player" unique_id=425887738]
+texture = ExtResource("7_arj3n")
+
+[node name="ForwardPlayer2" type="Sprite2D" parent="Player" unique_id=1169661233]
+visible = false
+position = Vector2(0, 1.5)
+texture = ExtResource("8_vfwmo")
+
+[node name="BackwardsPlayer" type="Sprite2D" parent="Player" unique_id=1483400295]
+visible = false
+position = Vector2(-1, 2)
+texture = ExtResource("9_4urrg")
+
+[node name="BackwardsPlayer2" type="Sprite2D" parent="Player" unique_id=470380910]
+visible = false
+position = Vector2(0, 1)
+texture = ExtResource("10_ohml4")
+
+[node name="LeftPlayer" type="Sprite2D" parent="Player" unique_id=2076205109]
+visible = false
+position = Vector2(0, 2)
+texture = ExtResource("11_dbwmk")
+
+[node name="LeftPlayer2" type="Sprite2D" parent="Player" unique_id=1286335861]
+visible = false
+position = Vector2(0, 2)
+texture = ExtResource("12_nryb1")
+
+[node name="RightPlayer" type="Sprite2D" parent="Player" unique_id=1280332657]
+visible = false
+position = Vector2(0, 2.5)
+texture = ExtResource("13_3fro6")
+
+[node name="RightPlayer2" type="Sprite2D" parent="Player" unique_id=1480154750]
+visible = false
+position = Vector2(0, 2.5)
+texture = ExtResource("14_dm0to")
+
+[node name="PlayerCamera" type="Camera2D" parent="Player" unique_id=1420377710]
+zoom = Vector2(2, 2)
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="Player" unique_id=618166221]
+position = Vector2(0, 3.3491874)
+rotation = 3.1415927
+scale = Vector2(0.5201092, 1.5775864)
+shape = SubResource("RectangleShape2D_x2105")
