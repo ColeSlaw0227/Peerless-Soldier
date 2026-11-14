@@ -36,6 +36,7 @@ shape = SubResource("CircleShape2D_pj3qg")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=680696443]
 script = ExtResource("1_77bs5")
+feetspeed = 10
 
 [node name="ForwardPlayer" type="Sprite2D" parent="Player" unique_id=1072930454]
 texture = ExtResource("4_1oo4e")
