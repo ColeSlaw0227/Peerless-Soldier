@@ -27,7 +27,8 @@ func _process(delta):
 				newBullet2.rotation = bulletrot2
 				add_child(newBullet2)
 				bulletrot2 += PI/6
-			bullettimer += delta
+			bullettimer = 0
+		bullettimer += delta
 	if (timeelapsed < 30 && timeelapsed > 10) || (timeelapsed < 80 && timeelapsed > 60) || (timeelapsed < 130 && timeelapsed > 110):
 		position = ($"../Player".position) + Vector2(100,-100)
 		if lazercount > 1:
