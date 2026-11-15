@@ -7,6 +7,7 @@ var boss_health = boss_max
 var bulletrot1 = 0
 var bulletrot2 = PI
 var timeelapsed = 0
+var isAlive = true
 func _ready() -> void:
 	timer.wait_time = bulletspawns
 	timer.one_shot = false
@@ -28,5 +29,10 @@ func _on_timer_timeout():
 	timeelapsed += bulletspawns
 func take_damage(damagetaken: int):
 	boss_health -= damagetaken
-	print(boss_health)
+	if boss_health == 0:
+		boss_death()
+
+func boss_death():
+	print("death")
+	queue_free()
 	

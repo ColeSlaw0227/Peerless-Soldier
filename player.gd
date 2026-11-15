@@ -6,7 +6,7 @@ const PLAYER_SWIPE = preload("res://playerswipe.tscn")
 @export var feetspeed = 4
 @export var scene1 = false
 @export var scene2 = false
-@export var attackspeed = 0.05
+@export var attackspeed = 0.15
 @export var player_max_health = 20
 var player_health = player_max_health
 var canattack = false
@@ -14,7 +14,7 @@ var count_timer = 0
 var playerrotation = 0
 func _ready() -> void:
 	timer.wait_time = attackspeed
-	timer.one_shot = true
+	timer.one_shot = false
 	timer.timeout.connect(_on_timer_timeout)
 	timer.start()
 func _physics_process(delta: float):
@@ -71,6 +71,7 @@ func _physics_process(delta: float):
 		var newSwipe = PLAYER_SWIPE.instantiate()
 		newSwipe.position = Vector2(0,0)
 		add_child(newSwipe)
+		canattack = false
 	var collisionresult =  move_and_collide(velocity * delta * Vector2.ZERO)
 	if collisionresult != null:
 		var whatcollided = collisionresult.get_collider()

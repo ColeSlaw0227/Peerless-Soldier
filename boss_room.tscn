@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://f6j8fwbkc0jw" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/1 Tiles/Tileset.png" id="1_any6y"]
 [ext_resource type="PackedScene" uid="uid://c8pvhp0k8akbg" path="res://security_bot.tscn" id="2_chy0o"]
-[ext_resource type="PackedScene" uid="uid://db5awj35ka1bw" path="res://boss_bullet.tscn" id="3_chy0o"]
 [ext_resource type="PackedScene" uid="uid://cxbyb3bqh88o0" path="res://player.tscn" id="5_m2ex5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n8ie0"]
@@ -85,21 +84,6 @@ tile_set = SubResource("TileSet_eddnu")
 
 [node name="SecurityBot" parent="." unique_id=192979782 instance=ExtResource("2_chy0o")]
 position = Vector2(513, -889)
-
-[node name="BossBullet2" parent="." unique_id=1855431545 instance=ExtResource("3_chy0o")]
-position = Vector2(367, -450)
-rotation = 5.3118763
-bulletspeed = 10.0
-
-[node name="BossBullet3" parent="." unique_id=292440496 instance=ExtResource("3_chy0o")]
-position = Vector2(516, -444)
-rotation = -1.9604131
-bulletspeed = 10.0
-
-[node name="BossBullet4" parent="." unique_id=736634715 instance=ExtResource("3_chy0o")]
-position = Vector2(453, -444)
-rotation = -5.730502
-bulletspeed = 10.0
 
 [node name="Player" parent="." unique_id=1311913064 instance=ExtResource("5_m2ex5")]
 position = Vector2(453, -382)
