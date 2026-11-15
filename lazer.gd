@@ -7,8 +7,7 @@ func _process(delta):
 	if  curtime > 0.2:
 		queue_free()
 	curtime += delta
-	
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	print("hit")
-	if body.is_in_group("Player"):
-		body.take_damage(2)
+func _on_lazer_area_body_entered(body: Node2D) -> void:
+		if body.is_in_group("Player"):
+			body.take_damage(attackdamage)
+		queue_free()
