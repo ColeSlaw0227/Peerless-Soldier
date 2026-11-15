@@ -8,5 +8,3 @@ func _ready() -> void:
 var input_direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if event.is_action_pressed("ui_cancel"):
-		get_tree().quit()
