@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dhafw8go34d6o" path="res://Sprite Assets/BackGrounds/pattern - grid sheet - 100x100in-BAtools (1).png" id="1_bdfba"]
 [ext_resource type="Texture2D" uid="uid://bd7uqaumxxfkp" path="res://Sprite Assets/AdminBot/AdminBot.png" id="2_pj3qg"]
+[ext_resource type="Script" uid="uid://cs8txfpi6c66v" path="res://area_2d.gd" id="4_a7ayd"]
 [ext_resource type="Texture2D" uid="uid://mvbc7c43a8id" path="res://Sprite Assets/Attack/Bullet.png" id="12_d6a44"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ruoc2"]
@@ -9,6 +10,9 @@ size = Vector2(30.759747, 21.712372)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lc65s"]
 size = Vector2(19.84448, 131.92099)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ss6w1"]
+radius = 2.0
 
 [node name="MainRoom" type="Node2D" unique_id=1126727139]
 
@@ -42,4 +46,14 @@ shape = SubResource("RectangleShape2D_lc65s")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1548735129]
 scale = Vector2(0.99999994, 1.0000001)
+texture = ExtResource("12_d6a44")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=805206241]
+script = ExtResource("4_a7ayd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1783072280]
+position = Vector2(356, -880)
+shape = SubResource("CircleShape2D_ss6w1")
+
+[node name="Bullet" type="Sprite2D" parent="Area2D2/CollisionShape2D" unique_id=1044199350]
 texture = ExtResource("12_d6a44")

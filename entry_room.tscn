@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://xab4sb0mwpom" path="res://Sprite Assets/Player/Peerless Soldier LeftFace2.png" id="12_nryb1"]
 [ext_resource type="Texture2D" uid="uid://c1pnb3ty7mi71" path="res://Sprite Assets/Player/Peerless Soldier RightFace.png" id="13_3fro6"]
 [ext_resource type="Texture2D" uid="uid://cspbme3b0ejjd" path="res://Sprite Assets/Player/Peerless Soldier RightFace2.png" id="14_dm0to"]
+[ext_resource type="Script" uid="uid://cs8txfpi6c66v" path="res://area_2d.gd" id="15_f8ryi"]
+[ext_resource type="Texture2D" uid="uid://mvbc7c43a8id" path="res://Sprite Assets/Attack/Bullet.png" id="16_5oa2c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_484wh"]
 texture = ExtResource("1_x2105")
@@ -90,6 +92,9 @@ sources/0 = SubResource("TileSetAtlasSource_484wh")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2105"]
 size = Vector2(15.916561, 10.584761)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_8sv04"]
+radius = 2.0
+
 [node name="EntryRoom" type="Node2D" unique_id=469964683]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1165405452]
@@ -113,7 +118,7 @@ position = Vector2(0, -2)
 texture = ExtResource("5_8sv04")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=431769409]
-position = Vector2(-418, -116)
+position = Vector2(49, -36)
 script = ExtResource("6_qd6ql")
 feetspeed = 5
 
@@ -163,3 +168,14 @@ position = Vector2(0, 3.3491874)
 rotation = 3.1415927
 scale = Vector2(0.5201092, 1.5775864)
 shape = SubResource("RectangleShape2D_x2105")
+
+[node name="BossBullet" type="Area2D" parent="." unique_id=1527800914]
+position = Vector2(49, -36)
+script = ExtResource("15_f8ryi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BossBullet" unique_id=215498456]
+position = Vector2(356, -880)
+shape = SubResource("CircleShape2D_8sv04")
+
+[node name="Bullet" type="Sprite2D" parent="BossBullet/CollisionShape2D" unique_id=1770711571]
+texture = ExtResource("16_5oa2c")
