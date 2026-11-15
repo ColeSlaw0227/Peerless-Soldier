@@ -15,6 +15,7 @@ script = ExtResource("1_pxg10")
 [node name="Area2D" type="Area2D" parent="." unique_id=1159003916]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=895579772]
+scale = Vector2(-1.9464709, 1.0249622)
 shape = SubResource("RectangleShape2D_lc65s")
 
 [node name="LazerBoom" type="Sprite2D" parent="." unique_id=117888547]

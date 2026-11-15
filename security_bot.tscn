@@ -19,7 +19,7 @@ position = Vector2(0, -4)
 scale = Vector2(0.24, 0.77999973)
 shape = SubResource("RectangleShape2D_lc65s")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1856996305]
+[node name="SecurityBotSprite" type="Sprite2D" parent="." unique_id=1856996305]
 texture = ExtResource("2_tyk4v")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1450935176]

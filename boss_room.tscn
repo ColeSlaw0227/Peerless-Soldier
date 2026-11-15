@@ -247,6 +247,4 @@ tile_set = SubResource("TileSet_8xpae")
 position = Vector2(513, -889)
 
 [node name="Player" parent="." unique_id=1311913064 instance=ExtResource("5_m2ex5")]
-position = Vector2(497, -52.999996)
-scale = Vector2(0.99999994, 0.99999994)
-musicOn = false
+position = Vector2(507, -588)

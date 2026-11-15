@@ -2,7 +2,7 @@ extends CharacterBody2D
 const BOSS_BULLET = preload("res://boss_bullet.tscn")
 const LazerCall = preload("res://lazer_call.tscn")
 @export var bulletspawns = 0.2
-@export var boss_max = 1
+@export var boss_max = 250
 var boss_health = boss_max
 var isBossDead = false
 var bulletrot1 = 0
@@ -73,13 +73,13 @@ func take_damage(damagetaken: int):
 	if boss_health <= 0:
 		boss_death()
 	$Hitsound.play()
-	$BossHealthBar/BossHealthAmount.translate(Vector2(-0.48,0))
+	$BossHealthBar/BossHealthAmount.translate(Vector2(-0.48/2.5,0))
 	$BossHealthBar/BossHealthAmount.scale.x = 0.089 * (boss_health/float(boss_max))
 
 func boss_death():
 	print("death")
-	$"../player".onBossDeath()
+	$"../Player".onBossDeath()
 	
-	$Sprite2D.show = false
-	timeelapsed = -100000
+	$SecurityBotSprite.visible = false
+	queue_free()
 	
