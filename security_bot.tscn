@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c8pvhp0k8akbg"]
+
+[ext_resource type="Script" uid="uid://bx520f53fpogy" path="res://security_bot.gd" id="1_frbhv"]
+[ext_resource type="Texture2D" uid="uid://dmk8qqbeg65cg" path="res://Sprite Assets/Securitron/Securitron.png" id="2_tyk4v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lc65s"]
+size = Vector2(83, 87)
+
+[node name="SecurityBot" type="CharacterBody2D" unique_id=192979782]
+script = ExtResource("1_frbhv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1856996305]
+texture = ExtResource("2_tyk4v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1562097698]
+position = Vector2(2.5, 0.5)
+shape = SubResource("RectangleShape2D_lc65s")
+
+[node name="BulletTimer" type="Timer" parent="." unique_id=1168820035]

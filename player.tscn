@@ -18,7 +18,10 @@ size = Vector2(15.916561, 10.584761)
 [node name="Player" type="CharacterBody2D" unique_id=1311913064]
 script = ExtResource("1_nvl01")
 musicOn = true
+player_speed = null
 feetspeed = 5
+scene1 = null
+scene2 = null
 
 [node name="BackroundMusic" type="AudioStreamPlayer" parent="." unique_id=1454039570]
 stream = ExtResource("2_ivps1")

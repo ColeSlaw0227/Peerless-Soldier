@@ -7,8 +7,8 @@
 radius = 2.0
 
 [node name="BossBullet" type="Area2D" unique_id=1855431545]
+scale = Vector2(2, 2)
 script = ExtResource("1_rcspk")
-bulletspeed = 250.0
 
 [node name="Bullet" type="Sprite2D" parent="." unique_id=872916381]
 texture = ExtResource("2_6o4xk")
@@ -16,3 +16,5 @@ texture = ExtResource("2_6o4xk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1872780514]
 position = Vector2(356, -880)
 shape = SubResource("CircleShape2D_8sv04")
+
+[node name="BulletDespawn" type="Timer" parent="." unique_id=1646755293]
