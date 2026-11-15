@@ -3,8 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dwx7l6sc5mimn" path="res://Sprite Assets/Securitron/Lazer Attack.png" id="1_avoeb"]
 [ext_resource type="Script" uid="uid://bqgxg7hks4fhd" path="res://lazer.gd" id="1_pxg10"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lc65s"]
-size = Vector2(1064, 68)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nr5ds"]
 
 [node name="Lazer" type="CharacterBody2D" unique_id=727974576]
 scale = Vector2(20, 0.5)
@@ -12,13 +11,17 @@ collision_layer = 4
 collision_mask = 4
 script = ExtResource("1_pxg10")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1159003916]
+[node name="LazerArea" type="Area2D" parent="." unique_id=705044003]
+position = Vector2(0, 2)
+scale = Vector2(100, 1)
+collision_layer = 5
+collision_mask = 5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=895579772]
-scale = Vector2(-1.9464709, 1.0249622)
-shape = SubResource("RectangleShape2D_lc65s")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LazerArea" unique_id=433040080]
+scale = Vector2(3.7804878, 4.3809524)
+shape = SubResource("RectangleShape2D_nr5ds")
 
 [node name="LazerBoom" type="Sprite2D" parent="." unique_id=117888547]
 texture = ExtResource("1_avoeb")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="LazerArea" to="." method="_on_lazer_area_body_entered"]
