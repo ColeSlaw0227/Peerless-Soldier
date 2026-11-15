@@ -5,17 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://d3vc46233ea0g" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/2 Background/Night/2.png" id="3_f8ryi"]
 [ext_resource type="Texture2D" uid="uid://dxw6wgfiqna41" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/2 Background/Night/3.png" id="4_5oa2c"]
 [ext_resource type="Texture2D" uid="uid://btcq58xui3gdh" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/2 Background/Night/5.png" id="5_8sv04"]
-[ext_resource type="Script" uid="uid://bvmn3hkgp8eju" path="res://player.gd" id="6_qd6ql"]
-[ext_resource type="Texture2D" uid="uid://d01c27vrgyvda" path="res://Sprite Assets/Player/Peerless Soldier ForwardFace.png" id="7_arj3n"]
-[ext_resource type="Texture2D" uid="uid://ohm88wvodehy" path="res://Sprite Assets/Player/peerless Soldier ForwardFace2.png" id="8_vfwmo"]
-[ext_resource type="Texture2D" uid="uid://jw463ij3tcp3" path="res://Sprite Assets/Player/Peerless Soldier BackwardsFace.png" id="9_4urrg"]
-[ext_resource type="Texture2D" uid="uid://6ia84vm6tw6g" path="res://Sprite Assets/Player/Peerless Soldier BackwardsFace2.png" id="10_ohml4"]
-[ext_resource type="Texture2D" uid="uid://hegvj3olxv55" path="res://Sprite Assets/Player/Peerless Soldier LeftFace.png" id="11_dbwmk"]
-[ext_resource type="Texture2D" uid="uid://xab4sb0mwpom" path="res://Sprite Assets/Player/Peerless Soldier LeftFace2.png" id="12_nryb1"]
-[ext_resource type="Texture2D" uid="uid://c1pnb3ty7mi71" path="res://Sprite Assets/Player/Peerless Soldier RightFace.png" id="13_3fro6"]
-[ext_resource type="Texture2D" uid="uid://cspbme3b0ejjd" path="res://Sprite Assets/Player/Peerless Soldier RightFace2.png" id="14_dm0to"]
-[ext_resource type="Script" uid="uid://cs8txfpi6c66v" path="res://area_2d.gd" id="15_f8ryi"]
-[ext_resource type="Texture2D" uid="uid://mvbc7c43a8id" path="res://Sprite Assets/Attack/Bullet.png" id="16_5oa2c"]
+[ext_resource type="PackedScene" uid="uid://cxbyb3bqh88o0" path="res://player.tscn" id="6_3tumh"]
+[ext_resource type="PackedScene" uid="uid://db5awj35ka1bw" path="res://boss_bullet.tscn" id="7_wn43i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_484wh"]
 texture = ExtResource("1_x2105")
@@ -89,12 +80,6 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_484wh")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2105"]
-size = Vector2(15.916561, 10.584761)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_8sv04"]
-radius = 2.0
-
 [node name="EntryRoom" type="Node2D" unique_id=469964683]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1165405452]
@@ -117,66 +102,8 @@ texture = ExtResource("4_5oa2c")
 position = Vector2(0, -2)
 texture = ExtResource("5_8sv04")
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=431769409]
+[node name="Player" parent="." unique_id=1311913064 instance=ExtResource("6_3tumh")]
 position = Vector2(49, -36)
-script = ExtResource("6_qd6ql")
-feetspeed = 5
 
-[node name="ForwardPlayer" type="Sprite2D" parent="Player" unique_id=425887738]
-texture = ExtResource("7_arj3n")
-
-[node name="ForwardPlayer2" type="Sprite2D" parent="Player" unique_id=1169661233]
-visible = false
-position = Vector2(0, 1.5)
-texture = ExtResource("8_vfwmo")
-
-[node name="BackwardsPlayer" type="Sprite2D" parent="Player" unique_id=1483400295]
-visible = false
-position = Vector2(-1, 2)
-texture = ExtResource("9_4urrg")
-
-[node name="BackwardsPlayer2" type="Sprite2D" parent="Player" unique_id=470380910]
-visible = false
-position = Vector2(0, 1)
-texture = ExtResource("10_ohml4")
-
-[node name="LeftPlayer" type="Sprite2D" parent="Player" unique_id=2076205109]
-visible = false
-position = Vector2(0, 2)
-texture = ExtResource("11_dbwmk")
-
-[node name="LeftPlayer2" type="Sprite2D" parent="Player" unique_id=1286335861]
-visible = false
-position = Vector2(0, 2)
-texture = ExtResource("12_nryb1")
-
-[node name="RightPlayer" type="Sprite2D" parent="Player" unique_id=1280332657]
-visible = false
-position = Vector2(0, 2.5)
-texture = ExtResource("13_3fro6")
-
-[node name="RightPlayer2" type="Sprite2D" parent="Player" unique_id=1480154750]
-visible = false
-position = Vector2(0, 2.5)
-texture = ExtResource("14_dm0to")
-
-[node name="PlayerCamera" type="Camera2D" parent="Player" unique_id=1420377710]
-zoom = Vector2(2, 2)
-
-[node name="PlayerCollision" type="CollisionShape2D" parent="Player" unique_id=618166221]
-position = Vector2(0, 3.3491874)
-rotation = 3.1415927
-scale = Vector2(0.5201092, 1.5775864)
-shape = SubResource("RectangleShape2D_x2105")
-
-[node name="BossBullet" type="Area2D" parent="." unique_id=1527800914]
+[node name="BossBullet" parent="." unique_id=1855431545 instance=ExtResource("7_wn43i")]
 position = Vector2(76, -42)
-script = ExtResource("15_f8ryi")
-bulletspeed = 10.0
-
-[node name="Bullet" type="Sprite2D" parent="BossBullet" unique_id=1770711571]
-texture = ExtResource("16_5oa2c")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BossBullet" unique_id=215498456]
-position = Vector2(356, -880)
-shape = SubResource("CircleShape2D_8sv04")

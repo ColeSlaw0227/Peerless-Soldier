@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cxbyb3bqh88o0"]
+
+[ext_resource type="Script" uid="uid://bvmn3hkgp8eju" path="res://player.gd" id="1_nvl01"]
+[ext_resource type="AudioStream" uid="uid://d0b5tauext1pi" path="res://Music/Peerless_Soldier_Background.mp3" id="2_ivps1"]
+[ext_resource type="Script" uid="uid://b5fmkcs84wgui" path="res://backround_music.gd" id="3_urp6f"]
+[ext_resource type="Texture2D" uid="uid://d01c27vrgyvda" path="res://Sprite Assets/Player/Peerless Soldier ForwardFace.png" id="4_bwjto"]
+[ext_resource type="Texture2D" uid="uid://ohm88wvodehy" path="res://Sprite Assets/Player/peerless Soldier ForwardFace2.png" id="5_606se"]
+[ext_resource type="Texture2D" uid="uid://jw463ij3tcp3" path="res://Sprite Assets/Player/Peerless Soldier BackwardsFace.png" id="6_u1c27"]
+[ext_resource type="Texture2D" uid="uid://6ia84vm6tw6g" path="res://Sprite Assets/Player/Peerless Soldier BackwardsFace2.png" id="7_op7ga"]
+[ext_resource type="Texture2D" uid="uid://hegvj3olxv55" path="res://Sprite Assets/Player/Peerless Soldier LeftFace.png" id="8_q13i1"]
+[ext_resource type="Texture2D" uid="uid://xab4sb0mwpom" path="res://Sprite Assets/Player/Peerless Soldier LeftFace2.png" id="9_pylmc"]
+[ext_resource type="Texture2D" uid="uid://c1pnb3ty7mi71" path="res://Sprite Assets/Player/Peerless Soldier RightFace.png" id="10_pbfsw"]
+[ext_resource type="Texture2D" uid="uid://cspbme3b0ejjd" path="res://Sprite Assets/Player/Peerless Soldier RightFace2.png" id="11_5tmop"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2105"]
+size = Vector2(15.916561, 10.584761)
+
+[node name="Player" type="CharacterBody2D" unique_id=1311913064]
+script = ExtResource("1_nvl01")
+musicOn = true
+feetspeed = 5
+
+[node name="BackroundMusic" type="AudioStreamPlayer" parent="." unique_id=1454039570]
+stream = ExtResource("2_ivps1")
+script = ExtResource("3_urp6f")
+
+[node name="ForwardPlayer" type="Sprite2D" parent="." unique_id=369288435]
+texture = ExtResource("4_bwjto")
+
+[node name="ForwardPlayer2" type="Sprite2D" parent="." unique_id=566613230]
+visible = false
+position = Vector2(0, 1.5)
+texture = ExtResource("5_606se")
+
+[node name="BackwardsPlayer" type="Sprite2D" parent="." unique_id=1773764285]
+visible = false
+position = Vector2(-1, 2)
+texture = ExtResource("6_u1c27")
+
+[node name="BackwardsPlayer2" type="Sprite2D" parent="." unique_id=59924092]
+visible = false
+position = Vector2(0, 1)
+texture = ExtResource("7_op7ga")
+
+[node name="LeftPlayer" type="Sprite2D" parent="." unique_id=1590268867]
+visible = false
+position = Vector2(0, 2)
+texture = ExtResource("8_q13i1")
+
+[node name="LeftPlayer2" type="Sprite2D" parent="." unique_id=1141445697]
+visible = false
+position = Vector2(0, 2)
+texture = ExtResource("9_pylmc")
+
+[node name="RightPlayer" type="Sprite2D" parent="." unique_id=561841771]
+visible = false
+position = Vector2(0, 2.5)
+texture = ExtResource("10_pbfsw")
+
+[node name="RightPlayer2" type="Sprite2D" parent="." unique_id=1975439945]
+visible = false
+position = Vector2(0, 2.5)
+texture = ExtResource("11_5tmop")
+
+[node name="PlayerCamera" type="Camera2D" parent="." unique_id=1894638777]
+zoom = Vector2(2, 2)
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=470508896]
+position = Vector2(0, 3.3491874)
+rotation = 3.1415927
+scale = Vector2(0.5201092, 1.5775864)
+shape = SubResource("RectangleShape2D_x2105")

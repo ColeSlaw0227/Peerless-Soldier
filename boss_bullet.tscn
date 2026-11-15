@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://db5awj35ka1bw"]
+
+[ext_resource type="Script" uid="uid://cs8txfpi6c66v" path="res://area_2d.gd" id="1_rcspk"]
+[ext_resource type="Texture2D" uid="uid://mvbc7c43a8id" path="res://Sprite Assets/Attack/Bullet.png" id="2_6o4xk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8sv04"]
+radius = 2.0
+
+[node name="BossBullet" type="Area2D" unique_id=1855431545]
+script = ExtResource("1_rcspk")
+bulletspeed = 250.0
+
+[node name="Bullet" type="Sprite2D" parent="." unique_id=872916381]
+texture = ExtResource("2_6o4xk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1872780514]
+position = Vector2(356, -880)
+shape = SubResource("CircleShape2D_8sv04")

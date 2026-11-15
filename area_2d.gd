@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var bulletspeed = 1.0
+@export var bulletspeed = 100.0
 var xmov = 0.0
 var ymov = 0.0
 var facing = rotation_degrees + 90

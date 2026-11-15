@@ -1,15 +1,13 @@
 extends CharacterBody2D
 
-
+@export var musicOn = false
 @export var player_speed = 300.0
 @export var feetspeed = 4
-
 var timer = 0.0
 func _physics_process(delta: float):
 	var input_direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 	velocity = input_direction * player_speed
 	move_and_slide()
-	print(velocity)
 	$ForwardPlayer.visible = false
 	$RightPlayer.visible = false
 	$LeftPlayer.visible = false
@@ -45,4 +43,10 @@ func _physics_process(delta: float):
 				$BackwardsPlayer2.visible = true
 	else:
 		$ForwardPlayer.visible = true
+	if musicOn == true && $BackroundMusic.is_playing() == false:
+		$BackroundMusic.play()
 	timer += delta
+	if Input.is_action_just_pressed("roll"):
+		velocity = velocity * 10
+		print("Rolled")
+		move_and_slide()
