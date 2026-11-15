@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c78n53sungqdm"]
+
+[ext_resource type="Texture2D" uid="uid://dfy2lqglafpcs" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/1 Tiles/BackTile_01.png" id="1_6fiti"]
+[ext_resource type="Texture2D" uid="uid://bd7uqaumxxfkp" path="res://Sprite Assets/AdminBot/AdminBot.png" id="2_tcppk"]
+[ext_resource type="Texture2D" uid="uid://cljdijaj54swq" path="res://Sprite Assets/Text Boxes/death.png" id="3_4sgkg"]
+[ext_resource type="Script" uid="uid://yshrp7733366" path="res://death.gd" id="4_pgt46"]
+
+[node name="Node2D" type="Node2D" unique_id=1582744621]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=467638355]
+scale = Vector2(36.013405, 19.961811)
+texture = ExtResource("1_6fiti")
+
+[node name="bot" type="Sprite2D" parent="." unique_id=91086135]
+position = Vector2(-286, 153)
+scale = Vector2(7.1574035, 6.793489)
+texture = ExtResource("2_tcppk")
+
+[node name="Death" type="Sprite2D" parent="." unique_id=1407572958]
+position = Vector2(-6.9999924, -41)
+scale = Vector2(0.77796, 0.6173481)
+texture = ExtResource("3_4sgkg")
+script = ExtResource("4_pgt46")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=530868448]

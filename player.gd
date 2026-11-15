@@ -7,7 +7,7 @@ const PLAYER_SWIPE = preload("res://playerswipe.tscn")
 @export var scene1 = false
 @export var scene2 = false
 @export var attackspeed = 0.15
-@export var player_max_health = 20
+@export var player_max_health = 1
 var player_health = player_max_health
 var canattack = false
 var count_timer = 0
@@ -87,7 +87,9 @@ func take_damage(damagetaken: int):
 	$PlayerHealth/PlayerHealthAmount.translate(Vector2(2.4*damagetaken,0))
 	$PlayerHealth/PlayerHealthAmount.scale.x = 0.089 * (player_health/float(player_max_health))
 	if player_health <= 0:
-		print("Game Over")
+		var full_path = "res://Deathscene.tscn"
+		var scene_tree = get_tree()
+		scene_tree.change_scene_to_file(full_path)
 func _on_timer_timeout():
 	canattack = true
 	
