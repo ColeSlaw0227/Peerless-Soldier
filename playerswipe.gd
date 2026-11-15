@@ -2,6 +2,7 @@ extends Area2D
 
 @export var bulletspeed = 200.0
 @onready var timer: Timer = $SwipeDespawn
+@export var attackdamage = 1
 var xmov = 0.0
 var ymov = 0.0
 var facing = 0.0
@@ -13,7 +14,7 @@ func _ready():
 	timer.timeout.connect(_on_timer_timeout)
 	timer.start()
 	look_at(get_global_mouse_position())
-	facing  = rotation
+	facing = rotation
 func _physics_process(delta: float) -> void:
 	xmov = cos(facing) * bulletspeed * delta
 	ymov = sin(facing) * bulletspeed * delta
@@ -21,3 +22,11 @@ func _physics_process(delta: float) -> void:
 
 func _on_timer_timeout():
 	queue_free()
+func _on_body_entered(body: CollisionShape2D) -> void:
+	print("hit")
+	if body.is_in_group("Enemy"):
+		print("Hit an enemy!")
+		# Example: Call a damage function on the enemy and destroy the projectile
+		if body.has_method("take_damage"):
+			body.take_damage(attackdamage)
+		queue_free()

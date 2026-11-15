@@ -4,16 +4,25 @@
 [ext_resource type="Texture2D" uid="uid://dmk8qqbeg65cg" path="res://Sprite Assets/Securitron/Securitron.png" id="2_tyk4v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lc65s"]
-size = Vector2(83, 87)
+size = Vector2(81, 103)
 
-[node name="SecurityBot" type="CharacterBody2D" unique_id=192979782]
+[node name="SecurityBot" type="CharacterBody2D" unique_id=192979782 groups=["Enemy"]]
 script = ExtResource("1_frbhv")
+
+[node name="Body" type="CollisionShape2D" parent="." unique_id=240770456]
+position = Vector2(0, -4)
+scale = Vector2(0.24, 0.77999973)
+shape = SubResource("RectangleShape2D_lc65s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1856996305]
 texture = ExtResource("2_tyk4v")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1562097698]
-position = Vector2(2.5, 0.5)
+[node name="Hitbox" type="Area2D" parent="." unique_id=1450935176]
+
+[node name="damageBox" type="CollisionShape2D" parent="Hitbox" unique_id=1562097698]
+position = Vector2(1.5, -4.5)
 shape = SubResource("RectangleShape2D_lc65s")
 
 [node name="BulletTimer" type="Timer" parent="." unique_id=1168820035]
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

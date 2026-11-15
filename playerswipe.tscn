@@ -9,7 +9,7 @@ size = Vector2(6, 20)
 [node name="Player-Swipe" type="Area2D" unique_id=726333808]
 script = ExtResource("1_3mep0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1803494847]
+[node name="PlayerAttackBox" type="CollisionShape2D" parent="." unique_id=1803494847]
 shape = SubResource("RectangleShape2D_lc65s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1175740637]

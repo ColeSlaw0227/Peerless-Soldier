@@ -26,3 +26,7 @@ func _on_timer_timeout():
 			add_child(newBullet2)
 			bulletrot2 += PI/6
 	timeelapsed += bulletspawns
+func take_damage(damagetaken: int):
+	boss_health -= damagetaken
+	print(boss_health)
+	
