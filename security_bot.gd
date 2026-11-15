@@ -2,7 +2,7 @@ extends CharacterBody2D
 const BOSS_BULLET = preload("res://boss_bullet.tscn")
 const LazerCall = preload("res://lazer_call.tscn")
 @export var bulletspawns = 0.2
-@export var boss_max = 250
+@export var boss_max = 100
 var boss_health = boss_max
 var isBossDead = false
 var bulletrot1 = 0
