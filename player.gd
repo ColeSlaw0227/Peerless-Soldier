@@ -1,7 +1,4 @@
 extends CharacterBody2D
-
-class_name Player
-
 const PLAYER_SWIPE = preload("res://playerswipe.tscn")
 @onready var timer: Timer = $SlashTimer
 @export var musicOn = false
