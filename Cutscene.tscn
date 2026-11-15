@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bys5judjwixax"]
+
+[ext_resource type="Texture2D" uid="uid://isr4r6p3yuri" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/2 Background/Night/1.png" id="1_af1qv"]
+[ext_resource type="Texture2D" uid="uid://d3vc46233ea0g" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/2 Background/Night/2.png" id="2_pxf6e"]
+[ext_resource type="Texture2D" uid="uid://dxw6wgfiqna41" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/2 Background/Night/3.png" id="3_6d88a"]
+[ext_resource type="Texture2D" uid="uid://btcq58xui3gdh" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/2 Background/Night/5.png" id="4_5lioo"]
+
+[node name="Node2D" type="Node2D" unique_id=767923359]
+
+[node name="1" type="Sprite2D" parent="." unique_id=1638609122]
+position = Vector2(2, -1)
+texture = ExtResource("1_af1qv")
+
+[node name="2" type="Sprite2D" parent="1" unique_id=635462536]
+position = Vector2(-1, 1)
+texture = ExtResource("2_pxf6e")
+
+[node name="3" type="Sprite2D" parent="1/2" unique_id=695720840]
+position = Vector2(1, -1)
+texture = ExtResource("3_6d88a")
+
+[node name="5" type="Sprite2D" parent="1/2/3" unique_id=571379244]
+position = Vector2(0, -2)
+texture = ExtResource("4_5lioo")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=327560500]
+position = Vector2(2, -1)

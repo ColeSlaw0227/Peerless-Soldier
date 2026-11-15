@@ -30,8 +30,6 @@ collision_mask = 2
 position = Vector2(1.5, -4.5)
 shape = SubResource("RectangleShape2D_lc65s")
 
-[node name="BulletTimer" type="Timer" parent="." unique_id=1168820035]
-
 [node name="Hitsound" type="AudioStreamPlayer2D" parent="." unique_id=1214518928]
 stream = ExtResource("3_tyk4v")
 

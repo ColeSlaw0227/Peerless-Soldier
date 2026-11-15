@@ -1,10 +1,10 @@
 extends CharacterBody2D
 const BOSS_BULLET = preload("res://boss_bullet.tscn")
 const LazerCall = preload("res://lazer_call.tscn")
-@onready var timer: Timer = $BulletTimer
 @export var bulletspawns = 0.2
-@export var boss_max = 100
+@export var boss_max = 0
 var boss_health = boss_max
+var isBossDead = false
 var bulletrot1 = 0
 var bulletrot2 = PI
 var timeelapsed = 0.0
@@ -12,25 +12,22 @@ var isAlive = true
 var lazercount = 0.0
 var lazergridcount = 0.0
 var lazertimenum = 0
-func _ready() -> void:
-	timer.wait_time = bulletspawns
-	timer.one_shot = false
-	timer.timeout.connect(_on_timer_timeout)
-	timer.start()
-func _on_timer_timeout():
-	if (timeelapsed < 10) || (timeelapsed < 60 && timeelapsed > 50) || (timeelapsed < 110 && timeelapsed > 100):
-		var newBullet = BOSS_BULLET.instantiate()
-		newBullet.position = Vector2(0,0)
-		newBullet.rotation = bulletrot1
-		add_child(newBullet)
-		bulletrot1 += PI/6
-		if timeelapsed > 20 && boss_health > 50:
-			var newBullet2 = BOSS_BULLET.instantiate()
-			newBullet2.position = Vector2(0,0)
-			newBullet2.rotation = bulletrot2
-			add_child(newBullet2)
-			bulletrot2 += PI/6
+var bullettimer = 0
 func _process(delta):
+	if (timeelapsed < 10) || (timeelapsed < 60 && timeelapsed > 50) || (timeelapsed < 110 && timeelapsed > 100):
+		if bullettimer > 0.2:
+			var newBullet = BOSS_BULLET.instantiate()
+			newBullet.position = Vector2(0,0)
+			newBullet.rotation = bulletrot1
+			add_child(newBullet)
+			bulletrot1 += PI/6
+			if timeelapsed > 20 && boss_health > 50:
+				var newBullet2 = BOSS_BULLET.instantiate()
+				newBullet2.position = Vector2(0,0)
+				newBullet2.rotation = bulletrot2
+				add_child(newBullet2)
+				bulletrot2 += PI/6
+			bullettimer += delta
 	if (timeelapsed < 30 && timeelapsed > 10) || (timeelapsed < 80 && timeelapsed > 60) || (timeelapsed < 130 && timeelapsed > 110):
 		position = ($"../Player".position) + Vector2(100,-100)
 		if lazercount > 1:
@@ -72,7 +69,7 @@ func shoot_lazer(angle: float, place: Vector2):
 	add_sibling(newLazer)
 func take_damage(damagetaken: int):
 	boss_health -= damagetaken
-	if boss_health == 0:
+	if boss_health <= 0:
 		boss_death()
 	$Hitsound.play()
 	$BossHealthBar/BossHealthAmount.translate(Vector2(-0.48,0))
@@ -80,5 +77,8 @@ func take_damage(damagetaken: int):
 
 func boss_death():
 	print("death")
-	queue_free()
+	$"../player".onBossDeath()
+	
+	$Sprite2D.show = false
+	timeelapsed = -100000
 	

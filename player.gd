@@ -91,3 +91,8 @@ func take_damage(damagetaken: int):
 func _on_timer_timeout():
 	canattack = true
 	
+func onBossDeath():
+	var full_path = "res://Cutscene.tscn"
+	var scene_tree = get_tree()
+	scene_tree.change_scene_to_file(full_path)
+	
