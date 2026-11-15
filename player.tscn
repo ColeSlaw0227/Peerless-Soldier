@@ -96,3 +96,5 @@ scale = Vector2(0.089, 0.1)
 texture = ExtResource("3_606se")
 
 [node name="SlashTimer" type="Timer" parent="." unique_id=1835608675]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1336018687]

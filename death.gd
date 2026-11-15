@@ -5,8 +5,8 @@ extends Sprite2D
 func _ready() -> void:
 	pass # Replace with function body.
 
-
+var input_direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if(var input_direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")):
-		$"../"player.playerHealth = 10
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().quit()
