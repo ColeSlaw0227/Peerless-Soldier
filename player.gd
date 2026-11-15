@@ -8,7 +8,6 @@ const PLAYER_SWIPE = preload("res://playerswipe.tscn")
 @export var scene2 = false
 @export var attackspeed = 0.15
 @export var player_max_health = 20
-
 var player_health = player_max_health
 var canattack = false
 var count_timer = 0
@@ -19,6 +18,7 @@ func _ready() -> void:
 	timer.timeout.connect(_on_timer_timeout)
 	timer.start()
 func _physics_process(delta: float):
+	
 	var input_direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 	velocity = input_direction * player_speed
 	move_and_slide()
@@ -58,8 +58,10 @@ func _physics_process(delta: float):
 	else:
 		$ForwardPlayer.visible = true
 	count_timer += delta
-	if musicOn == true && $BackroundMusic.is_playing() == false:
+	if musicOn == true && $BackroundMusic.is_playing() == false && get_tree().current_scene.name != "Boss_Room":
 		$BackroundMusic.play()
+	if musicOn == true && $BossMusic.is_playing() == false && get_tree().current_scene.name == "Boss_Room": 
+		$BossMusic.play()
 	if Input.is_action_just_pressed("roll"):
 		velocity = velocity * 10
 		print("Rolled")
@@ -82,6 +84,10 @@ func _physics_process(delta: float):
 			whatcollided.queue_free()
 func take_damage(damagetaken: int):
 	player_health -= damagetaken
+	$PlayerHealth/PlayerHealthAmount.translate(Vector2(2.4*damagetaken,0))
+	$PlayerHealth/PlayerHealthAmount.scale.x = 0.089 * (player_health/float(player_max_health))
+	if player_health <= 0:
+		print("Game Over")
 func _on_timer_timeout():
 	canattack = true
 	
