@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 @export var bulletspeed = 200.0
 @onready var timer: Timer = $SwipeDespawn
@@ -18,15 +18,14 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	xmov = cos(facing) * bulletspeed * delta
 	ymov = sin(facing) * bulletspeed * delta
-	translate(Vector2(xmov,ymov))
-
+	translate(Vector2(xmov, ymov))
+	var collisionresult =  move_and_collide(bulletspeed * delta * Vector2.ZERO)
+	if collisionresult != null:
+		var whatcollided = collisionresult.get_collider()
+		if whatcollided.is_in_group("Enemy"):
+			if whatcollided.has_method("take_damage"):
+				whatcollided.take_damage(attackdamage)
+		queue_free()
 func _on_timer_timeout():
 	queue_free()
-func _on_body_entered(body: CollisionShape2D) -> void:
-	print("hit")
-	if body.is_in_group("Enemy"):
-		print("Hit an enemy!")
-		# Example: Call a damage function on the enemy and destroy the projectile
-		if body.has_method("take_damage"):
-			body.take_damage(attackdamage)
-		queue_free()
+		

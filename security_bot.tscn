@@ -7,6 +7,8 @@
 size = Vector2(81, 103)
 
 [node name="SecurityBot" type="CharacterBody2D" unique_id=192979782 groups=["Enemy"]]
+collision_layer = 7
+collision_mask = 7
 script = ExtResource("1_frbhv")
 
 [node name="Body" type="CollisionShape2D" parent="." unique_id=240770456]
@@ -18,6 +20,8 @@ shape = SubResource("RectangleShape2D_lc65s")
 texture = ExtResource("2_tyk4v")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1450935176]
+collision_layer = 2
+collision_mask = 2
 
 [node name="damageBox" type="CollisionShape2D" parent="Hitbox" unique_id=1562097698]
 position = Vector2(1.5, -4.5)
