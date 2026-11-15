@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dwuxg62j6ptei"]
+
+[ext_resource type="Texture2D" uid="uid://bd7uqaumxxfkp" path="res://Sprite Assets/AdminBot/AdminBot.png" id="1_n7miq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xpae"]
+size = Vector2(18, 25)
+
+[node name="AdminBot" type="CharacterBody2D" unique_id=1988436161]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1484010301]
+texture = ExtResource("1_n7miq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1484857957]
+position = Vector2(1, 2.5)
+shape = SubResource("RectangleShape2D_8xpae")
