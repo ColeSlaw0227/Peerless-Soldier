@@ -82,8 +82,12 @@ sources/0 = SubResource("TileSetAtlasSource_484wh")
 
 [node name="EntryRoom" type="Node2D" unique_id=469964683]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1165405452]
+[node name="TileMapLayer-noncolliding" type="TileMapLayer" parent="." unique_id=1165405452]
 tile_map_data = PackedByteArray("AAAAAP3/AAAAAAQAAAAAAP7/AAAAAAUAAAAAAP//AAAAAAYAAAABAP3/AAABAAQAAAABAP7/AAABAAUAAAABAP//AAABAAYAAAACAP3/AAABAAQAAAACAP7/AAABAAUAAAACAP//AAABAAYAAAD+//7/AAABAAEAAAD///7/AAAFAAEAAAD9//7/AAABAAEAAAD8//7/AAAHAAMAAAD7//7/AAABAAEAAAD6//7/AAAFAAMAAAD5//7/AAAAAAMAAAD5//3/AAADAAEAAAD5//z/AAAHAAEAAAD5//v/AAACAAIAAAD5//r/AAADAAEAAAD5//n/AAADAAEAAAD5//j/AAADAAEAAAD5//f/AAADAAEAAAD5//b/AAADAAEAAAD5//X/AAADAAEAAAD5//T/AAADAAEAAAADAP3/AAABAAQAAAADAP7/AAABAAUAAAADAP//AAABAAYAAAAEAP3/AAABAAQAAAAEAP7/AAABAAUAAAAEAP//AAABAAYAAAAFAP3/AAABAAQAAAAFAP7/AAABAAUAAAAFAP//AAABAAYAAAAGAP3/AAABAAQAAAAGAP7/AAABAAUAAAAGAP//AAABAAYAAAAHAP3/AAABAAQAAAAHAP7/AAABAAUAAAAHAP//AAABAAYAAAAIAP3/AAABAAQAAAAIAP7/AAABAAUAAAAIAP//AAABAAYAAAAJAP3/AAABAAQAAAAJAP7/AAABAAUAAAAJAP//AAABAAYAAAAKAP3/AAABAAQAAAAKAP7/AAABAAUAAAAKAP//AAABAAYAAAA=")
+tile_set = SubResource("TileSet_pvicv")
+
+[node name="TileMapLayer-colliding" type="TileMapLayer" parent="." unique_id=268471699]
+tile_map_data = PackedByteArray("AAACAP7/AAABAAUAAAA=")
 tile_set = SubResource("TileSet_pvicv")
 
 [node name="1" type="Sprite2D" parent="." unique_id=377645897]
@@ -104,6 +108,13 @@ texture = ExtResource("5_8sv04")
 
 [node name="Player" parent="." unique_id=1311913064 instance=ExtResource("6_3tumh")]
 position = Vector2(49, -36)
+musicOn = false
 
 [node name="BossBullet" parent="." unique_id=1855431545 instance=ExtResource("7_wn43i")]
 position = Vector2(76, -42)
+bulletspeed = 10.0
+
+[node name="BossBullet2" parent="." unique_id=2086300878 instance=ExtResource("7_wn43i")]
+position = Vector2(82, -42)
+rotation = 3.1415927
+bulletspeed = 10.0
