@@ -72,6 +72,7 @@ func _physics_process(delta: float):
 		newSwipe.position = Vector2(0,0)
 		add_child(newSwipe)
 		canattack = false
+		$PlayerSwing.play()
 	var collisionresult =  move_and_collide(velocity * delta * Vector2.ZERO)
 	if collisionresult != null:
 		var whatcollided = collisionresult.get_collider()
@@ -80,7 +81,6 @@ func _physics_process(delta: float):
 			whatcollided.queue_free()
 func take_damage(damagetaken: int):
 	player_health -= damagetaken
-	print(player_health)
 func _on_timer_timeout():
 	canattack = true
 	

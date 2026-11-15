@@ -31,6 +31,9 @@ func take_damage(damagetaken: int):
 	boss_health -= damagetaken
 	if boss_health == 0:
 		boss_death()
+	$Hitsound.play()
+	$BossHealthBar/BossHealthAmount.translate(Vector2(-0.49,0))
+	$BossHealthBar/BossHealthAmount.scale.x = 0.089 * (boss_health/100.0)
 
 func boss_death():
 	print("death")

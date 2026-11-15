@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dmoakjk7ah7hf"]
+
+[ext_resource type="Texture2D" uid="uid://jbum0qa6c6gn" path="res://Sprite Assets/Securitron/Boss_Healthbar_empty.png" id="1_a2g3m"]
+[ext_resource type="Script" uid="uid://b6n26noap2qmr" path="res://boss_health_bar.gd" id="2_qxh78"]
+[ext_resource type="Texture2D" uid="uid://dwx7l6sc5mimn" path="res://Sprite Assets/Securitron/Lazer Attack.png" id="3_1rd1n"]
+
+[node name="BossHealthBar" type="Sprite2D" unique_id=1630619009]
+z_index = 5
+texture = ExtResource("1_a2g3m")
+script = ExtResource("2_qxh78")
+
+[node name="BossHealthAmount" type="Sprite2D" parent="." unique_id=2132006344]
+z_index = -1
+position = Vector2(-3.9999995, 10.999999)
+scale = Vector2(0.089, 0.1)
+texture = ExtResource("3_1rd1n")

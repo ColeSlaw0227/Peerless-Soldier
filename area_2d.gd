@@ -19,10 +19,8 @@ func _physics_process(delta: float) -> void:
 	translate(Vector2(xmov,ymov))
 	var collisionresult =  move_and_collide(bulletspeed * delta * Vector2.ZERO)
 	if collisionresult != null:
-		print("hi")
 		var whatcollided = collisionresult.get_collider()
 		if whatcollided.is_in_group("Player"):
-			print("hiii")
 			if whatcollided.has_method("take_damage"):
 				whatcollided.take_damage(attackdamage)
 		queue_free()

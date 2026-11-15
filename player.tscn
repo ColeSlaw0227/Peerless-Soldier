@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://xab4sb0mwpom" path="res://Sprite Assets/Player/Peerless Soldier LeftFace2.png" id="9_pylmc"]
 [ext_resource type="Texture2D" uid="uid://c1pnb3ty7mi71" path="res://Sprite Assets/Player/Peerless Soldier RightFace.png" id="10_pbfsw"]
 [ext_resource type="Texture2D" uid="uid://cspbme3b0ejjd" path="res://Sprite Assets/Player/Peerless Soldier RightFace2.png" id="11_5tmop"]
+[ext_resource type="AudioStream" uid="uid://b2nwp27q5mmdc" path="res://Sound Effects/oxidvideos-sword-swing-sfx-407574.mp3" id="12_ivps1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2105"]
 size = Vector2(15.916561, 10.584761)
@@ -74,3 +75,9 @@ scale = Vector2(0.5201092, 1.5775864)
 shape = SubResource("RectangleShape2D_x2105")
 
 [node name="SlashTimer" type="Timer" parent="." unique_id=1875154344]
+
+[node name="PlayerSwing" type="AudioStreamPlayer2D" parent="." unique_id=273478731]
+position = Vector2(0, 3.3491874)
+rotation = -3.1415925
+scale = Vector2(0.5201092, 1.5775864)
+stream = ExtResource("12_ivps1")

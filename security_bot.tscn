@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bx520f53fpogy" path="res://security_bot.gd" id="1_frbhv"]
 [ext_resource type="Texture2D" uid="uid://dmk8qqbeg65cg" path="res://Sprite Assets/Securitron/Securitron.png" id="2_tyk4v"]
+[ext_resource type="AudioStream" uid="uid://v1p51m168ce7" path="res://Sound Effects/freesound_community-sword-hit-7160.mp3" id="3_tyk4v"]
+[ext_resource type="Texture2D" uid="uid://jbum0qa6c6gn" path="res://Sprite Assets/Securitron/Boss_Healthbar_empty.png" id="4_gyx3h"]
+[ext_resource type="Texture2D" uid="uid://dwx7l6sc5mimn" path="res://Sprite Assets/Securitron/Lazer Attack.png" id="5_ra4hx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lc65s"]
 size = Vector2(81, 103)
@@ -28,5 +31,19 @@ position = Vector2(1.5, -4.5)
 shape = SubResource("RectangleShape2D_lc65s")
 
 [node name="BulletTimer" type="Timer" parent="." unique_id=1168820035]
+
+[node name="Hitsound" type="AudioStreamPlayer2D" parent="." unique_id=1214518928]
+stream = ExtResource("3_tyk4v")
+
+[node name="BossHealthBar" type="Sprite2D" parent="." unique_id=2099206475]
+z_index = 5
+position = Vector2(7, -70)
+texture = ExtResource("4_gyx3h")
+
+[node name="BossHealthAmount" type="Sprite2D" parent="BossHealthBar" unique_id=651031316]
+z_index = -1
+position = Vector2(-3.9999995, 10.999999)
+scale = Vector2(0.089, 0.1)
+texture = ExtResource("5_ra4hx")
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
