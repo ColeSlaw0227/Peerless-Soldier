@@ -106,5 +106,7 @@ script = ExtResource("3_chy0o")
 position = Vector2(356, -880)
 shape = SubResource("CircleShape2D_l6v35")
 
-[node name="Bullet" type="Sprite2D" parent="Area2D/CollisionShape2D" unique_id=2051181862]
+[node name="Bullet" type="Sprite2D" parent="Area2D" unique_id=2051181862]
+position = Vector2(356, -880)
+rotation = 1.2793263
 texture = ExtResource("4_m2ex5")

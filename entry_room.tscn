@@ -170,12 +170,13 @@ scale = Vector2(0.5201092, 1.5775864)
 shape = SubResource("RectangleShape2D_x2105")
 
 [node name="BossBullet" type="Area2D" parent="." unique_id=1527800914]
-position = Vector2(49, -36)
+position = Vector2(76, -42)
 script = ExtResource("15_f8ryi")
+bulletspeed = 10.0
+
+[node name="Bullet" type="Sprite2D" parent="BossBullet" unique_id=1770711571]
+texture = ExtResource("16_5oa2c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BossBullet" unique_id=215498456]
 position = Vector2(356, -880)
 shape = SubResource("CircleShape2D_8sv04")
-
-[node name="Bullet" type="Sprite2D" parent="BossBullet/CollisionShape2D" unique_id=1770711571]
-texture = ExtResource("16_5oa2c")
