@@ -7,8 +7,8 @@
 size = Vector2(81, 103)
 
 [node name="SecurityBot" type="CharacterBody2D" unique_id=192979782 groups=["Enemy"]]
-collision_layer = 7
-collision_mask = 7
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_frbhv")
 
 [node name="Body" type="CollisionShape2D" parent="." unique_id=240770456]

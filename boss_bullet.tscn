@@ -6,15 +6,17 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_8sv04"]
 radius = 2.0
 
-[node name="BossBullet" type="Area2D" unique_id=1855431545]
+[node name="BossBullet" type="CharacterBody2D" unique_id=1312637619]
 scale = Vector2(2, 2)
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_rcspk")
 
 [node name="Bullet" type="Sprite2D" parent="." unique_id=872916381]
 texture = ExtResource("2_6o4xk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1872780514]
-position = Vector2(356, -880)
+position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_8sv04")
 
 [node name="BulletDespawn" type="Timer" parent="." unique_id=1646755293]

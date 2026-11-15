@@ -1,7 +1,8 @@
-extends Area2D
+extends CharacterBody2D
 
 @export var bulletspeed = 100.0
 @onready var timer: Timer = $BulletDespawn
+@export var attackdamage = 1
 var xmov = 0.0
 var ymov = 0.0
 var facing = 0.0
@@ -16,6 +17,14 @@ func _physics_process(delta: float) -> void:
 	xmov = cos(facing) * bulletspeed * delta
 	ymov = sin(facing) * bulletspeed * delta
 	translate(Vector2(xmov,ymov))
-
+	var collisionresult =  move_and_collide(bulletspeed * delta * Vector2.ZERO)
+	if collisionresult != null:
+		print("hi")
+		var whatcollided = collisionresult.get_collider()
+		if whatcollided.is_in_group("Player"):
+			print("hiii")
+			if whatcollided.has_method("take_damage"):
+				whatcollided.take_damage(attackdamage)
+		queue_free()
 func _on_timer_timeout():
 	queue_free()
