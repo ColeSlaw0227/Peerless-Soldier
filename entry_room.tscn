@@ -119,4 +119,6 @@ bulletspeed = 10.0
 position = Vector2(12.000015, -49)
 scale = Vector2(0.99999994, 0.99999994)
 musicOn = false
+player_speed = 300.0
+scene1 = false
 scene2 = false

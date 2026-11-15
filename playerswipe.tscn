@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ycigmbk5fnx6"]
+
+[ext_resource type="Script" uid="uid://3ht5jd4oc8fn" path="res://playerswipe.gd" id="1_3mep0"]
+[ext_resource type="Texture2D" uid="uid://du8tdcoh5af1t" path="res://Sprite Assets/Attack/Swipe.png" id="1_iqy3g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lc65s"]
+size = Vector2(6, 20)
+
+[node name="Player-Swipe" type="Area2D" unique_id=726333808]
+script = ExtResource("1_3mep0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1803494847]
+shape = SubResource("RectangleShape2D_lc65s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1175740637]
+rotation = 1.5707964
+texture = ExtResource("1_iqy3g")
+
+[node name="SwipeDespawn" type="Timer" parent="." unique_id=1964195965]
