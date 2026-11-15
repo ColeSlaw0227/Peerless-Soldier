@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cykkwcedh6sbv"]
+
+[ext_resource type="Texture2D" uid="uid://dwx7l6sc5mimn" path="res://Sprite Assets/Securitron/Lazer Attack.png" id="1_rs0d8"]
+[ext_resource type="Script" uid="uid://cc2hkl0ymer4a" path="res://lazer_call.gd" id="2_ooy8k"]
+
+[node name="LazerCall" type="Sprite2D" unique_id=729917476]
+scale = Vector2(20, 0.1)
+texture = ExtResource("1_rs0d8")
+script = ExtResource("2_ooy8k")

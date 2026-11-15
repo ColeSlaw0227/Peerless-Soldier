@@ -23,6 +23,6 @@ func _physics_process(delta: float) -> void:
 		if whatcollided.is_in_group("Player"):
 			if whatcollided.has_method("take_damage"):
 				whatcollided.take_damage(attackdamage)
-		queue_free()
+			queue_free()
 func _on_timer_timeout():
 	queue_free()

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dq4vk2rqjbr5p"]
+
+[ext_resource type="Texture2D" uid="uid://dwx7l6sc5mimn" path="res://Sprite Assets/Securitron/Lazer Attack.png" id="1_avoeb"]
+[ext_resource type="Script" uid="uid://bqgxg7hks4fhd" path="res://lazer.gd" id="1_pxg10"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lc65s"]
+size = Vector2(1064, 68)
+
+[node name="Lazer" type="CharacterBody2D" unique_id=727974576]
+scale = Vector2(20, 0.5)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_pxg10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=895579772]
+shape = SubResource("RectangleShape2D_lc65s")
+
+[node name="LazerBoom" type="Sprite2D" parent="." unique_id=117888547]
+texture = ExtResource("1_avoeb")
