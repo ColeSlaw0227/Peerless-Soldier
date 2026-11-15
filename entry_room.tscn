@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dxw6wgfiqna41" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/2 Background/Night/3.png" id="4_5oa2c"]
 [ext_resource type="PackedScene" uid="uid://dwuxg62j6ptei" path="res://admin_bot.tscn" id="4_fwl2g"]
 [ext_resource type="Texture2D" uid="uid://btcq58xui3gdh" path="res://Sprite Assets/BackGrounds/craftpix-net-111332-free-factory-pixel-art-32x32-tileset-for-cyberpunk/2 Background/Night/5.png" id="5_8sv04"]
+[ext_resource type="PackedScene" uid="uid://dlgmdk7tyai8s" path="res://scene_trigger.tscn" id="5_68a2m"]
+[ext_resource type="Script" uid="uid://c1pnqt3fdki88" path="res://portal.gd" id="5_rfjnj"]
 [ext_resource type="PackedScene" uid="uid://cxbyb3bqh88o0" path="res://player.tscn" id="6_3tumh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_68a2m"]
@@ -293,9 +295,15 @@ tile_set = SubResource("TileSet_pvicv")
 tile_map_data = PackedByteArray("AAABAPz/AAADAAcAAAACAPz/AAADAAcAAAADAPz/AAADAAcAAAAEAPz/AAADAAcAAAAFAPz/AAADAAcAAAAGAPz/AAADAAcAAAAHAPz/AAADAAcAAAAIAPz/AAADAAcAAAAJAPz/AAADAAcAAAAKAPz/AAADAAcAAAALAPz/AAADAAcAAAAMAPz/AAADAAcAAAANAPz/AAADAAcAAAAOAPz/AAADAAcAAAAPAPz/AAADAAcAAAAQAPz/AAADAAcAAAABAAAAAAAFAAgAAAACAAAAAAAFAAgAAAADAAAAAAAFAAgAAAAEAAAAAAAFAAgAAAAFAAAAAAAFAAgAAAAGAAAAAAAFAAgAAAAHAAAAAAAFAAgAAAAIAAAAAAAFAAgAAAAJAAAAAAAFAAgAAAAKAAAAAAAFAAgAAAALAAAAAAAFAAgAAAAMAAAAAAAFAAgAAAANAAAAAAAFAAgAAAAOAAAAAAAFAAgAAAAPAAAAAAAFAAgAAAAQAAAAAAAFAAgAAAARAAAAAAAFAAgAAAD///7/AAAFAAEAAAD/////AAADAAgAAAD///3/AAADAAgAAAD///z/AAAAAAcAAAAAAPz/AAADAAcAAAAAAAAAAAAFAAgAAAD//wAAAAAAAAgAAAARAPz/AAADAAcAAAASAPf/AAAAAAcAAAATAPf/AAADAAcAAAAUAPf/AAADAAcAAAAVAPf/AAADAAcAAAAWAPf/AAADAAcAAAAXAPf/AAADAAcAAAAYAPf/AAACAAcAAAASAPj/AAADAAgAAAAYAPj/AAAEAAgAAAAYAPn/AAAEAAgAAAAYAPr/AAAEAAgAAAAYAPv/AAAEAAgAAAASAPv/AAADAAgAAAASAPr/AAADAAgAAAASAPn/AAADAAgAAAASAAAAAAAFAAgAAAATAAAAAAAFAAgAAAAUAAAAAAAFAAgAAAAVAAAAAAAFAAgAAAAWAAAAAAAFAAgAAAAXAAAAAAAFAAgAAAAYAAAAAAAFAAgAAAAZAAAAAAAFAAgAAAAaAAAAAAAFAAgAAAAbAAAAAAAFAAgAAAAcAAAAAAAFAAgAAAAdAAAAAAAFAAgAAAAeAAAAAAAFAAgAAAAZAPz/AAADAAcAAAAaAPz/AAADAAcAAAAbAPz/AAADAAcAAAAcAPz/AAADAAcAAAAdAPz/AAADAAcAAAAeAPz/AAADAAcAAAAfAP3/AAAEAAgAAAAfAPz/AAACAAcAAAAfAAAAAAACAAgAAAAfAP//AAAEAAgAAAAgAP7/AAABAAIAAAAhAP7/AAABAAMAAAA=")
 tile_set = SubResource("TileSet_ibrdu")
 
-[node name="TileMapLayer-portal" type="TileMapLayer" parent="." unique_id=834976698]
+[node name="TileMapLayer-portal" type="TileMapLayer" parent="." unique_id=834976698 groups=["Player"]]
 tile_map_data = PackedByteArray("AAAfAP7/AAAFAAEAAAA=")
 tile_set = SubResource("TileSet_xng1f")
+script = ExtResource("5_rfjnj")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=914873672]
+position = Vector2(995, -49)
+
+[node name="SceneTrigger" parent="Node2D" unique_id=712219733 instance=ExtResource("5_68a2m")]
 
 [node name="TileMapLayer-prop" type="TileMapLayer" parent="." unique_id=1967032246]
 tile_map_data = PackedByteArray("AAASAPz/AAAAAAEAAAAYAPz/AAAAAAIAAAATAPj/AAABAAAAAAAUAPj/AAAAAAMAAAAVAPj/AAAAAAEAAAAWAPj/AAAAAAEAAAAXAPj/AAAAAAAAAAATAPn/AAAAAAIAAAATAPr/AAAAAAIAAAATAPv/AAAAAAAAAAAXAPv/AAABAAAAAAAXAPr/AAAAAAEAAAAXAPn/AAAAAAMAAAA=")
@@ -325,4 +333,5 @@ texture = ExtResource("5_8sv04")
 [node name="Player" parent="." unique_id=1311913064 instance=ExtResource("6_3tumh")]
 position = Vector2(12.000015, -49)
 scale = Vector2(0.99999994, 0.99999994)
+collision_mask = 12
 musicOn = false

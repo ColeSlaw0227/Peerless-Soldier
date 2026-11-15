@@ -1,4 +1,7 @@
 extends CharacterBody2D
+
+class_name Player
+
 const PLAYER_SWIPE = preload("res://playerswipe.tscn")
 @onready var timer: Timer = $SlashTimer
 @export var musicOn = false
@@ -8,6 +11,7 @@ const PLAYER_SWIPE = preload("res://playerswipe.tscn")
 @export var scene2 = false
 @export var attackspeed = 0.15
 @export var player_max_health = 20
+
 var player_health = player_max_health
 var canattack = false
 var count_timer = 0
